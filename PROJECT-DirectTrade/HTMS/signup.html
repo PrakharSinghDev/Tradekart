@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - B2B Website</title>
+    <link rel="stylesheet" href="../CSS/signup.css">
+    <script src="../JS/signup.js" defer></script>
+</head>
+<body>
+
+    <!-- nav bar section -->
+    <nav>
+        <div id="logo">
+            <img src="../CONTENT/IMAGES/logo.png" alt="Logo">
+        </div>
+        <div id="middle">
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </div>
+        <div id="right">
+            <ion-icon name="call-outline" id="ionicons"></ion-icon>
+        </div>
+    </nav>
+
+    <!-- Signup form section -->
+    <div id="signup-form">
+        <div class="form-container">
+            <h2>Create Your Account</h2>
+            <form onsubmit="signup_handler(event)">
+                <label>Username</label>
+                <input type="text" id="signup_username" name="username" placeholder="Enter your username" required>
+                
+                <label>Email</label>
+                <input type="email" id="signup_email" name="email" placeholder="Enter your email" required>
+                
+                <label>Password</label>
+                <input type="password" id="signup_password" name="password" placeholder="Enter your password" required>
+                
+                <label>Confirm Password</label>
+                <input type="password" id="signup_confirm_password" name="confirm-password" placeholder="Confirm your password" required>
+
+                <!-- <label for="location">Location <ion-icon name="location-sharp"></ion-icon></label>
+                <input type="text" id="signup_location" name="location" placeholder="Enter Your Location" required> -->
+                
+                <label>Profile Photo</label>
+                <input type="file" id="signup_profile_photo" name="profile-photo" accept="image/*" >
+                
+                <button type="submit">Sign Up</button>
+                <p id="error"></p>
+                <p>Already have an account? <a href="login.html">Log in here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

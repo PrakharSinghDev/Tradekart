@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d4e3ed;  
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3f2f1;
+    padding: 15px 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+nav #logo img {
+    height: 60px;
+    width: 100%;
+}
+
+nav #middle {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#nav-list li {
+    position: relative;
+}
+
+#nav-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+#nav-list li:hover a {
+    color: #007bff;
+}
+
+/* Left-to-right blue line hover effect */
+#nav-list li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Blue color for the line */
+    transition: width 0.5s ease;
+}
+
+#nav-list li:hover::before {
+    width: 100%; /* Line expands on hover */
+}
+
+nav #right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e96a6a;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 1.5s;
+}
+
+nav #right:hover {
+    background-color: #fce4e4;
+}
+
+nav #right #ionicons {
+    color: #e96a6a;
+    font-size: 24px;
+}   
+
+/* Signup Form styles */
+#signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d4e3ed;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container button {
+    background-color: rgb(127, 198, 190);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+.form-container button:hover {
+    background-color: rgb(26, 96, 119);
+    color: white;
+}
+
+.form-container #error{
+    color: red;
+}
+
+.form-container p {
+    margin-top: 15px;
+    color: #666;
+}
+
+.form-container a {
+    color: #e96a6a;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Form */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container button {
+        padding: 8px 15px;
+    }
+}
